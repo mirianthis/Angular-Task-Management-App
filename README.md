@@ -1,27 +1,26 @@
-# TaskManagmentApp
+# 📝 Task Management App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+A simple and intuitive **Task Management App** built with Angular. This application helps users efficiently organize and manage their tasks. Ideal for anyone looking to streamline their to-do lists and boost productivity!
 
-## Development server
+## ✨ Features
+- **Add New Tasks**: Create new tasks with a custom name.
+- **Edit Tasks**: Easily modify task names in-place with a single click.
+- **Remove Tasks**: Delete tasks seamlessly, with automatic ID reordering to keep tasks organized.
+- **Task Completion**: Mark tasks as complete using checkboxes.
+- **Responsive Design**: User-friendly interface that adapts to different screen sizes.
+- **Single Action Dropdown**: Streamlined options for task actions (Edit, Save, Delete) using a single dropdown button.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🛠️ Tech Stack
+- **Angular**: Frontend framework for building dynamic and responsive UI.
+- **Bootstrap**: For styling and responsive design.
+- **TypeScript**: Strongly typed JavaScript for better code quality.
 
-## Code scaffolding
+## 🚀 Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
+- **Node.js** (v14 or higher recommended)
+- **Angular CLI** (v12 or higher recommended)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Install Angular CLI if you don't have it:
+```bash
+npm install -g @angular/cli
