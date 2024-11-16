@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form (ngSubmit)="onAdd(f)" #f="ngForm">
+      <div class="row">
+        <div class="form-group">
+          <label for="task">Task</label>
+          <input
+            type="text"
+            id="task"
+            class="form-control"
+            placeholder="Enter Task"
+            name="name"
+            ngModel
+            required
+          />
+          <small id = "errorMessage" *ngIf="f.invalid && f.dirty" class="form-text text-danger">Required</small>
+          <br>
+          <button class="btn btn-success btn-md" type="submit" [disabled]="f.invalid" id="submitButton">Add</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

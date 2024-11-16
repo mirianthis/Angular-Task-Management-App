@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1 class="text-center">To Do List</h1>
+    <br />
+    <app-task-edit></app-task-edit>
+    <hr />
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Task</th>
+            <th scope="col">Checkbox</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let task of tasks; let i = index">
+          <tr>
+            <th scope="row">{{ task.id }}</th>
+            <td>
+              <span *ngIf="!task.isEditing">{{ task.name }}</span>
+              <input
+                *ngIf="task.isEditing"
+                type="text"
+                [(ngModel)]="task.name"
+                class="form-control"
+              />
+            </td>
+            <td>
+              <input
+                type="checkbox"
+                id="myCheckbox"
+                (click)="onCheck(i)"
+              />
+            </td>
+            <td>  
+              <div class="dropdown">
+                <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Actions
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item active" href="#" (click)="task.isEditing ? onSave(i) : onEdit(i)">{{ task.isEditing ? 'Save' : 'Edit' }}</a></li>
+                  <li><a class="dropdown-item" href="#" (click)="onDelete(i)">Remove</a></li>
+                </ul>
+              </div>          
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
